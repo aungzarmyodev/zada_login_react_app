@@ -5,6 +5,9 @@ import { View, Text, Linking, ActivityIndicator, Button, Alert } from 'react-nat
 const baseUrl = 'https://test.zadanetwork.com/api'; 
 const tenantId = '318a987a-8408-4f5e-93c0-5644fd4c9hf5';
 const tenantPassword = '!hosFS8xAmgh@b!%';
+const rcbUrl = "zadaloginapp://verification-complete";
+const webhookUrl = "https://daily-expense.wiremockapi.cloud//webhook/verify";
+
 
 const LoginScreen = () => {
   const [loading, setLoading] = useState(true);
@@ -90,8 +93,8 @@ const LoginScreen = () => {
     const data = {
       type: 'connectionless-verification',
       metadata: { policyId, tenantId },
-      rcb: 'redirectUrl',
-      wcb: 'webhookUrl',
+      rcb: rcbUrl,
+      wcb: webhookUrl,
     };
 
     const jsonString = JSON.stringify(data);
@@ -112,7 +115,7 @@ const LoginScreen = () => {
       ) : (
         <>
          <Text style={{ marginBottom: 12, fontSize: 16 }}>
-            Would you like to open Zada Wallet.
+            If you have Zada Wallet.
          </Text>
          <Button title="Login with Zada" onPress={handleLogin} />
         </>
