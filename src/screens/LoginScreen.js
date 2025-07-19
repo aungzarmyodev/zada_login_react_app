@@ -6,7 +6,7 @@ const baseUrl = 'https://test.zadanetwork.com/api';
 const tenantId = '318a987a-8408-4f5e-93c0-5644fd4c9hf5';
 const tenantPassword = '!hosFS8xAmgh@b!%';
 const rcbUrl = "zadaloginapp://verification-complete";
-const webhookUrl = "https://daily-expense.wiremockapi.cloud//webhook/verify";
+const webhookUrl = "https://api.hooklistener.com/w/existing-yellow-blackbird-gzr";
 
 
 const LoginScreen = () => {
@@ -21,8 +21,10 @@ const LoginScreen = () => {
       setToken(authToken);
 
       if (authToken) {
-        const fetchedPolicyId = await getPolicies(authToken);
-        setPolicyId(fetchedPolicyId);
+        // normally we will get policy id 
+        // const fetchedPolicyId = await getPolicies(authToken);
+        // setPolicyId(fetchedPolicyId);
+        setPolicyId('39a977da-0832-4ebf-8d55-f1b0d1b62bcf');
       }
 
       setLoading(false);
@@ -92,7 +94,7 @@ const LoginScreen = () => {
   if (policyId && token) {
     const data = {
       type: 'connectionless-verification',
-      metadata: { policyId, tenantId },
+      metadata: {policyId , tenantId },
       rcb: rcbUrl,
       wcb: webhookUrl,
     };

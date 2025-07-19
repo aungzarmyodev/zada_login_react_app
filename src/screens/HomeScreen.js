@@ -12,9 +12,9 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,              // Take full screen height
-    justifyContent: 'center', // Vertically center
-    alignItems: 'center',     // Horizontally center
+    flex: 1,              
+    justifyContent: 'center', 
+    alignItems: 'center',     
   },
   text: {
     fontSize: 24,
