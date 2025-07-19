@@ -5,7 +5,9 @@ import { View, Text, Linking, ActivityIndicator, Button, Alert } from 'react-nat
 const baseUrl = 'https://test.zadanetwork.com/api'; 
 const tenantId = '318a987a-8408-4f5e-93c0-5644fd4c9hf5';
 const tenantPassword = '!hosFS8xAmgh@b!%';
+// this is deeplink url 
 const rcbUrl = "zadaloginapp://verification-complete";
+// This is dummy webhookUrl 
 const webhookUrl = "https://api.hooklistener.com/w/existing-yellow-blackbird-gzr";
 
 
